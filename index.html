@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Краса природи</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comfortaa', cursive;
+      background: linear-gradient(to bottom, #cdefff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem;
+      background-color: #aee1f9;
+      border-bottom: 5px solid #84d2f6;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .description {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .buttons {
+      margin: 2rem;
+    }
+
+    .buttons button {
+      background-color: #6ec1e4;
+      border: none;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #3ba9d6;
+    }
+
+    .image-container {
+      margin: 1rem auto;
+      max-width: 90%;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #aee1f9;
+      font-size: 0.9rem;
+      border-top: 5px solid #84d2f6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 Краса природи очима ШІ 🌄</h1>
+</header>
+
+<div class="description">
+  <p>Цей сайт показує, як штучний інтелект "уявляє" природу. Обери пору року і подивись на дивовижні пейзажі! 🌸❄️🍁🌞</p>
+</div>
+
+<div class="buttons">
+  <button onclick="changeImage('spring')">Весна</button>
+  <button onclick="changeImage('summer')">Літо</button>
+  <button onclick="changeImage('autumn')">Осінь</button>
+  <button onclick="changeImage('winter')">Зима</button>
+</div>
+
+<div class="image-container">
+  <img src="images/krasa.prurodu.jpg.jpg" alt="Пейзаж природи">
+</div>
+
+<footer>
+  Зроблено з любов’ю до природи 💚 
+</footer>
+
+<script>
+  const images = {
+    spring: <img src="images/vesna.jpg.jpg" alt="Весна — пора цвітіння й оновлення 🌸">;
+    summer: <img src="images/lito.jpg.jpg" alt="Літо — сонце, зелень і тепло ☀️">;
+    autumn: <img src="images/osin.jpg.jpg" alt="Осінь — барви листя й затишок 🍁">;
+    winter: <img src="images/zyma.jpg.jpg" alt="Зима — сніг, казка і тиша ❄️">
+  };
+
+  function changeImage(season) {
+    const img = document.getElementById('natureImage');
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = images[season];
+      img.style.opacity = 1;
+    }, 300);
+  }
+</script>
+
+</body>
+</html>
