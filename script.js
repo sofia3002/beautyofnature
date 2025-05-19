@@ -4,7 +4,7 @@ const nextButton = document.getElementById('next-button');
 const seasonNameElement = document.getElementById('season-name');
 
 const seasons = [
-    { name: 'Весна', imageUrl: 'images/vesna.jpg.jpg' },
+    { name: 'Весна', imageUrl: 'images/vesna.jpg.png' },
     { name: 'Літо', imageUrl: 'images/lito.jpg.jpg' },
     { name: 'Осінь', imageUrl: 'images/osin.jpg.jpg' },
     { name: 'Зима', imageUrl: 'images/zyma.jpg.jpg' }
@@ -13,7 +13,7 @@ const seasons = [
 let currentIndex = 0;
 
 function updateImage() {
-    const currentSeason = seasons[currentIndex];
+    const currentSeason = seasons [currentIndex];
     imageElement.src = currentSeason.imageUrl;
     imageElement.alt = `Зображення ${currentSeason.name}, згенероване ШІ`;
     seasonNameElement.textContent = currentSeason.name;
